@@ -4,7 +4,9 @@
 
 Every template below is **tested and passing**. Interviews aren't a memory test of these — they're a test of whether you can *recognize which pattern a disguised problem maps to*, then adapt the template. So the highest-value page is the recognition index. Learn to read the signal first; the code is muscle memory you build by reps.
 
-> Companion to *The Decision-Driven Engineer*. Use the "reverse-engineer complexity from the input bound" trick (Part 1 there) alongside this: the constraint tells you the target Big-O, and the Big-O narrows the pattern.
+> Companion to [The Decision-Driven Engineer](./decision-driven-engineer.md). Use the "reverse-engineer complexity from the input bound" trick (Part 1 there) alongside this: the constraint tells you the target Big-O, and the Big-O narrows the pattern.
+>
+> *Part of [The FDE Playbook](./README.md).*
 
 ---
 
