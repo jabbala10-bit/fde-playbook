@@ -2,6 +2,8 @@
 
 ### A comparative reference — current as of early July 2026
 
+*Part of [The FDE Playbook](./README.md). For a build-oriented deep dive on the EU specifically, see the [EU AI Act guide](./eu-ai-act.md); for the FDE's operating model around all of this, see [The Governance Playbook](./governance-playbook.md).*
+
 > This is a fast-moving area. Every major jurisdiction changed its posture in 2025–2026: the EU *softened* and delayed its AI Act, the US pivoted to a deregulatory, pro-preemption federal stance while states pushed the other way, the UK stayed principles-based but started legislating at the edges, and Asia split into three distinct models. Treat every date below as a snapshot and verify against primary sources before making compliance decisions. This document is an orientation map, not legal advice.
 
 ---
