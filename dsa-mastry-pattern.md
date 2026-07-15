@@ -1,4 +1,4 @@
-# The FAANG DSA Pattern Library
+# The DSA Pattern Library
 
 ### ~22 patterns that cover the large majority of coding-interview problems
 
