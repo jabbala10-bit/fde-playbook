@@ -2,6 +2,8 @@
 
 ### Using AI & data governance as a deployment tool — for Forward-Deployed Engineers and full-stack AI architects
 
+*Part of [The FDE Playbook](./README.md). Deep dives: [EU AI Act guide](./eu-ai-act.md) · [comparative regulatory map](./ai-and-data-governance.md).*
+
 > Most engineers treat governance as a compliance tax that lands late. For an FDE it's the opposite: you're the rare person who is technical, customer-facing, *and* owns the deployment end to end — so governance questions land on **you first**, in the discovery room, before anything is built. Handled well, governance fluency is a deal-accelerator and a moat, not overhead. This playbook is how to hold it and how to use it.
 
 ---
