@@ -2,6 +2,8 @@
 
 ### A top-0.1% mental-model reference for building scalable, efficient, performant systems — and passing FAANG/MANGA bars
 
+*Part of [The FDE Playbook](./README.md). Companion: [DSA Pattern Library](./dsa-mastery-pattern.md) (Part 1 below pairs with its recognition index).*
+
 > This is not a facts dump. Top engineers aren't walking encyclopedias — they carry a small set of **decision frameworks** and a handful of **memorized constants**, and they apply them fast under ambiguity. This guide is organized around *decisions*, not topics. Read Part 0 first; it governs everything else.
 
 ---
