@@ -16,6 +16,10 @@ This repo is a small stack, not a single doc — start here, then branch out:
 | **[ai-and-data-governance.md](./ai-and-data-governance.md)** | Comparative regulatory map — US, UK, EU, China, South Korea, Japan, India |
 | **[decision-driven-engineer.md](./decision-driven-engineer.md)** | Mental-model reference for DSA, systems design, the machine, memory, concurrency — and the FAANG interview meta-game |
 | **[dsa-mastery-pattern.md](./dsa-mastery-pattern.md)** | ~22-pattern recognition index + tested templates, companion to the DSA part above |
+| **[reference-architecture.md](./reference-architecture.md)** | Build spec for the instrumented service layer every other doc points to but never specced |
+| **[eval-harness.md](./eval-harness.md)** | How to actually build eval-driven development — golden sets, metric choice, LLM-as-judge, CI wiring |
+| **[discovery-toolkit.md](./discovery-toolkit.md)** | Fillable templates: use-case scoring, stakeholder map, governance checklist, definition of done |
+| **[glossary.md](./glossary.md)** | One page for every acronym and term the stack assumes you already know |
 
 ---
 
@@ -73,7 +77,7 @@ The first deployment is a **beachhead**, not the war. You win a narrow, real, hi
 Each stage is a different job with a different goal, a different trap, and a concrete artifact you leave behind.
 
 ### 1 · Discovery — understand their world
-**Goal:** map the customer's reality and surface candidate use cases. **You do:** immerse — sit with end users, watch the actual workflow, read their systems, map stakeholders. Ask more than you tell. **The trap:** pitching solutions before you understand the problem; falling for the loudest stakeholder's pet idea. **Artifact:** a ranked list of use cases scored by value × feasibility, plus a stakeholder map.
+**Goal:** map the customer's reality and surface candidate use cases. **You do:** immerse — sit with end users, watch the actual workflow, read their systems, map stakeholders. Ask more than you tell. **The trap:** pitching solutions before you understand the problem; falling for the loudest stakeholder's pet idea. **Artifact:** a ranked list of use cases scored by value × feasibility, plus a stakeholder map. *(Fillable templates: [discovery-toolkit.md](./discovery-toolkit.md).)*
 
 ### 2 · Scoping — pick the wedge & define success
 **Goal:** choose the ONE highest-leverage use case and define what "it works" means *before* building. **You do:** pick for value × feasibility × visibility; define measurable success criteria; run the governance discovery questions; de-risk the biggest unknown first. **The trap:** scoping too big, or scoping something demo-able but not productionizable. **Artifact:** a crisp scope with success metrics, a risk/governance flag list, and a "definition of done."
@@ -97,8 +101,8 @@ Each stage is a different job with a different goal, a different trap, and a con
 
 ## The technical craft
 
-- **LLM system architecture.** Route every model call through **one instrumented service layer** — the same decision that gives you observability, cost control, evals, guardrails, and governance compliance for free. This is the single highest-leverage architectural choice you make; build it first and everything else bolts on.
-- **Eval-driven development — your superpower.** This is what separates FDEs from prompt-tinkerers. Before optimizing, build an eval set from real customer examples with clear success criteria. Every prompt change, model swap, and guardrail is measured against it. Evals turn "it feels better" into "accuracy went 82% → 91%," which is what customers and your own iteration actually need. You cannot productionize frontier models without them.
+- **LLM system architecture.** Route every model call through **one instrumented service layer** — the same decision that gives you observability, cost control, evals, guardrails, and governance compliance for free. This is the single highest-leverage architectural choice you make; build it first and everything else bolts on. *(Build spec: [reference-architecture.md](./reference-architecture.md).)*
+- **Eval-driven development — your superpower.** This is what separates FDEs from prompt-tinkerers. Before optimizing, build an eval set from real customer examples with clear success criteria. Every prompt change, model swap, and guardrail is measured against it. Evals turn "it feels better" into "accuracy went 82% → 91%," which is what customers and your own iteration actually need. You cannot productionize frontier models without them. *(How to build one: [eval-harness.md](./eval-harness.md).)*
 - **Closing the demo-to-production gap.** The prototype works on 10 hand-picked inputs; production faces 10,000 messy real ones. Guardrails (input/output validation, prompt-injection defense, PII handling, fallbacks), retries and graceful degradation, and relentless evals against real-world edge cases are how you cross it.
 - **Integration & data plumbing — the unglamorous 80%.** Getting the model to the answer is easy; getting the *right context in* and the *answer into their systems* is the work. Data access, retrieval, auth, APIs, their legacy stack. Respect this; it's where most deployments actually stall.
 - **Observability & cost.** Instrument latency, quality, and spend from day one. Frontier-model economics can make or break a use case; know your per-request cost and where it goes.
@@ -171,6 +175,10 @@ You now have a coherent stack for the role:
 - **[EU AI Act Implementation guide](./eu-ai-act.md)** — the deep reference behind the compliance stage.
 - **[AI & Data Governance: US · UK · EU · Asia](./ai-and-data-governance.md)** — the comparative map for when a customer isn't EU-first.
 - **[The Decision-Driven Engineer](./decision-driven-engineer.md)** + **[DSA Pattern Library](./dsa-mastery-pattern.md)** — the technical foundation the "productionize" stage rests on.
+- **[The Instrumented Service Layer](./reference-architecture.md)** — the build spec for the architecture named throughout this stack.
+- **[Eval-Driven Development](./eval-harness.md)** — how to build the "superpower" this stack keeps naming.
+- **[The Discovery Toolkit](./discovery-toolkit.md)** — fillable templates for the discovery/scoping stage.
+- **[Glossary](./glossary.md)** — the on-ramp for every acronym the other docs assume.
 
 ---
 
