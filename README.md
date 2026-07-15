@@ -2,7 +2,20 @@
 
 ### The craft of deploying frontier AI into real customer environments
 
-> The FDE is a fusion role: part engineer, part consultant, part product manager, part trusted advisor. You parachute into a customer's world, find the highest-value thing frontier AI can do for them, build it for real, prove it works, and expand from there. This playbook is the operating system for that job — the mindset, the lifecycle, the technical craft, and the customer-facing craft that engineers systematically underrate. The [Governance Playbook] you already have is one module of this.
+> The FDE is a fusion role: part engineer, part consultant, part product manager, part trusted advisor. You parachute into a customer's world, find the highest-value thing frontier AI can do for them, build it for real, prove it works, and expand from there. This playbook is the operating system for that job — the mindset, the lifecycle, the technical craft, and the customer-facing craft that engineers systematically underrate. The [Governance Playbook](./governance-playbook.md) is one module of this.
+
+## Contents
+
+This repo is a small stack, not a single doc — start here, then branch out:
+
+| Doc | What it covers |
+|---|---|
+| **[README.md](./README.md)** (this file) | The FDE role, operating loop, deployment lifecycle, and technical/customer-facing craft |
+| **[governance-playbook.md](./governance-playbook.md)** | Using AI & data governance as a deployment tool — discovery questions, architecture hooks, provider/deployer split |
+| **[eu-ai-act.md](./eu-ai-act.md)** | Build-oriented, risk-tier-by-risk-tier guide to EU AI Act compliance |
+| **[ai-and-data-governance.md](./ai-and-data-governance.md)** | Comparative regulatory map — US, UK, EU, China, South Korea, Japan, India |
+| **[decision-driven-engineer.md](./decision-driven-engineer.md)** | Mental-model reference for DSA, systems design, the machine, memory, concurrency — and the FAANG interview meta-game |
+| **[dsa-mastery-pattern.md](./dsa-mastery-pattern.md)** | ~22-pattern recognition index + tested templates, companion to the DSA part above |
 
 ---
 
@@ -154,10 +167,10 @@ Not lines of code. Not model cleverness. The real scoreboard:
 You now have a coherent stack for the role:
 
 - **This playbook** — the craft of the FDE role end to end.
-- **The Governance Playbook** — the governance/compliance module of this role.
-- **EU AI Act Implementation guide** — the deep reference behind the compliance stage.
-- **System Design worked example + DSA Pattern Library** — the technical foundation the "productionize" stage rests on.
-- **The Decision-Driven Engineer** — the meta-model of judgment running under all of it.
+- **[The Governance Playbook](./governance-playbook.md)** — the governance/compliance module of this role.
+- **[EU AI Act Implementation guide](./eu-ai-act.md)** — the deep reference behind the compliance stage.
+- **[AI & Data Governance: US · UK · EU · Asia](./ai-and-data-governance.md)** — the comparative map for when a customer isn't EU-first.
+- **[The Decision-Driven Engineer](./decision-driven-engineer.md)** + **[DSA Pattern Library](./dsa-mastery-pattern.md)** — the technical foundation the "productionize" stage rests on.
 
 ---
 
