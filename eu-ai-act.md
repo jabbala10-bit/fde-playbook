@@ -2,6 +2,8 @@
 
 ### A build-oriented guide, organized by risk category
 
+*Part of [The FDE Playbook](./README.md) — the compliance-stage deep dive for [The Governance Playbook](./governance-playbook.md). See also the [comparative regulatory map](./ai-and-data-governance.md) for non-EU customers.*
+
 > The AI Act is written for lawyers, but compliance is built by engineers and product teams. This guide translates the statutory obligations into **concrete artifacts you produce and systems you build**, tier by tier. The governing move is the same as any hard engineering problem: *classify first, because the risk tier determines everything you have to do.* Get the classification wrong and you either over-build (wasted months) or under-build (illegal product).
 >
 > Current to mid-2026, reflecting the Digital Omnibus timeline. Not legal advice — engage counsel to confirm your classification and conformity route.
@@ -226,3 +228,7 @@ Penalties, for calibration: prohibited-practice breaches up to €35M / 7% of gl
 ## The one thing to remember
 
 **Classification is the whole game.** The Act isn't one burden — it's four very different burdens, and which one you carry is decided entirely by *what your system is used for*, not what technology it uses. Nail the classification, build the instrumented service layer once, generate the paper trail inside your normal engineering process, and high-risk compliance becomes a demanding-but-tractable checklist rather than an existential threat. Verify your specific classification and conformity route with qualified counsel before you ship.
+
+---
+
+*Back to [The FDE Playbook](./README.md) · [The Governance Playbook](./governance-playbook.md) · [comparative regulatory map](./ai-and-data-governance.md)*
