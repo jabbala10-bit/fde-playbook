@@ -15,11 +15,28 @@ This repo is a small stack, not a single doc — start here, then branch out:
 | **[eu-ai-act.md](./eu-ai-act.md)** | Build-oriented, risk-tier-by-risk-tier guide to EU AI Act compliance |
 | **[ai-and-data-governance.md](./ai-and-data-governance.md)** | Comparative regulatory map — US, UK, EU, China, South Korea, Japan, India |
 | **[decision-driven-engineer.md](./decision-driven-engineer.md)** | Mental-model reference for DSA, systems design, the machine, memory, concurrency — and the FAANG interview meta-game |
-| **[dsa-mastery-pattern.md](./dsa-mastery-pattern.md)** | ~22-pattern recognition index + tested templates, companion to the DSA part above |
+| **[dsa-mastry-pattern.md](./dsa-mastry-pattern.md)** | ~22-pattern recognition index + tested templates, companion to the DSA part above |
 | **[reference-architecture.md](./reference-architecture.md)** | Build spec for the instrumented service layer every other doc points to but never specced |
-| **[eval-harness.md](./eval-harness.md)** | How to actually build eval-driven development — golden sets, metric choice, LLM-as-judge, CI wiring |
+| **[eval-driven-development.md](./eval-driven-development.md)** | How to actually build eval-driven development — golden sets, metric choice, LLM-as-judge, CI wiring |
 | **[discovery-toolkit.md](./discovery-toolkit.md)** | Fillable templates: use-case scoring, stakeholder map, governance checklist, definition of done |
 | **[glossary.md](./glossary.md)** | One page for every acronym and term the stack assumes you already know |
+| **[llm-slm.md](./llm-slm.md)** | LLM vs. SLM selection — when a small/local model beats a frontier API call |
+| **[prep-plan-4-week.md](./prep-plan-4-week.md)** | A sequenced 4-week study plan tying every doc, note, and capstone below into a schedule |
+| **[interview-drills.md](./interview-drills.md)** | Practice prompts with grading rubrics for each interview round |
+
+### Sub-collections
+
+The stack above is the core playbook. These are deeper, self-contained collections it draws on:
+
+| Folder | What's in it |
+|---|---|
+| **[notes/](./notes/)** | 20 numbered field notes — SQL, data modeling, GCP infra, LLM eval, RAG, observability, interview prep. [Index](./notes/README.md) |
+| **[case-studies/](./case-studies/)** | 9 worked FDE engagements across finance, healthcare, legal, energy, insurance, security, government, pharma. [Index](./case-studies/README.md) |
+| **[security/](./security/)** | A 10-part, 90-volume cybersecurity handbook for regulated/security-sensitive deployments. [Index](./security/README.md) |
+| **[databases/](./databases/)** | Relational, NoSQL, setup, and performance references for the data layer under any AI system. |
+| **[fde-on-field/](./fde-on-field/)** | Field notes from real engagements. |
+| **[coding/](./coding/)** | 14 runnable Python reference scripts (agent frameworks, RAG, EU AI Act/GDPR assessors, LLMOps metrics). See [pyproject.toml](./pyproject.toml) to install and `pytest` to run the test suite. |
+| **[capstones/](./capstones/)** | 4 hands-on, gradable projects that turn this playbook's architecture docs into working code — see [prep-plan-4-week.md](./prep-plan-4-week.md). |
 
 ---
 
@@ -102,7 +119,7 @@ Each stage is a different job with a different goal, a different trap, and a con
 ## The technical craft
 
 - **LLM system architecture.** Route every model call through **one instrumented service layer** — the same decision that gives you observability, cost control, evals, guardrails, and governance compliance for free. This is the single highest-leverage architectural choice you make; build it first and everything else bolts on. *(Build spec: [reference-architecture.md](./reference-architecture.md).)*
-- **Eval-driven development — your superpower.** This is what separates FDEs from prompt-tinkerers. Before optimizing, build an eval set from real customer examples with clear success criteria. Every prompt change, model swap, and guardrail is measured against it. Evals turn "it feels better" into "accuracy went 82% → 91%," which is what customers and your own iteration actually need. You cannot productionize frontier models without them. *(How to build one: [eval-harness.md](./eval-harness.md).)*
+- **Eval-driven development — your superpower.** This is what separates FDEs from prompt-tinkerers. Before optimizing, build an eval set from real customer examples with clear success criteria. Every prompt change, model swap, and guardrail is measured against it. Evals turn "it feels better" into "accuracy went 82% → 91%," which is what customers and your own iteration actually need. You cannot productionize frontier models without them. *(How to build one: [eval-driven-development.md](./eval-driven-development.md).)*
 - **Closing the demo-to-production gap.** The prototype works on 10 hand-picked inputs; production faces 10,000 messy real ones. Guardrails (input/output validation, prompt-injection defense, PII handling, fallbacks), retries and graceful degradation, and relentless evals against real-world edge cases are how you cross it.
 - **Integration & data plumbing — the unglamorous 80%.** Getting the model to the answer is easy; getting the *right context in* and the *answer into their systems* is the work. Data access, retrieval, auth, APIs, their legacy stack. Respect this; it's where most deployments actually stall.
 - **Observability & cost.** Instrument latency, quality, and spend from day one. Frontier-model economics can make or break a use case; know your per-request cost and where it goes.
@@ -174,11 +191,14 @@ You now have a coherent stack for the role:
 - **[The Governance Playbook](./governance-playbook.md)** — the governance/compliance module of this role.
 - **[EU AI Act Implementation guide](./eu-ai-act.md)** — the deep reference behind the compliance stage.
 - **[AI & Data Governance: US · UK · EU · Asia](./ai-and-data-governance.md)** — the comparative map for when a customer isn't EU-first.
-- **[The Decision-Driven Engineer](./decision-driven-engineer.md)** + **[DSA Pattern Library](./dsa-mastery-pattern.md)** — the technical foundation the "productionize" stage rests on.
+- **[The Decision-Driven Engineer](./decision-driven-engineer.md)** + **[DSA Pattern Library](./dsa-mastry-pattern.md)** — the technical foundation the "productionize" stage rests on.
 - **[The Instrumented Service Layer](./reference-architecture.md)** — the build spec for the architecture named throughout this stack.
-- **[Eval-Driven Development](./eval-harness.md)** — how to build the "superpower" this stack keeps naming.
+- **[Eval-Driven Development](./eval-driven-development.md)** — how to build the "superpower" this stack keeps naming.
 - **[The Discovery Toolkit](./discovery-toolkit.md)** — fillable templates for the discovery/scoping stage.
 - **[Glossary](./glossary.md)** — the on-ramp for every acronym the other docs assume.
+- **[The 4-Week Prep Plan](./prep-plan-4-week.md)** — sequences everything above (plus `notes/`, `case-studies/`, and the `capstones/`) into a study schedule.
+- **[Interview Drills](./interview-drills.md)** — gradable practice prompts for each round of the loop `notes/18` describes.
+- **[The Capstones](./capstones/)** — the hands-on layer: build the RAG system, the governance assessor, debug the instrumented service layer, and diagnose a full-stack incident across all 5 observability layers, don't just read about them.
 
 ---
 

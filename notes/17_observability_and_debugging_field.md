@@ -4,6 +4,13 @@
 > next to you when something breaks at 11pm before a client demo. You need
 > to find the root cause of any GCP/Kubernetes/AI system failure yourself,
 > fast. This file is your field debugging playbook.
+>
+> **Scope note:** this file covers the application/GCP layer (logs,
+> metrics, traces, events). For anything self-hosting a model on GPUs,
+> [notes/21_hardware_gpu_inference_and_observability.md](./21_hardware_gpu_inference_and_observability.md)
+> adds the fifth signal — GPU utilization, memory, power, temperature —
+> plus the hardware decision-making and troubleshooting that sits below
+> this layer.
 
 ---
 

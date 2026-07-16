@@ -95,7 +95,7 @@ Fill this out at the end of scoping, before any code is written. This is what "i
 |---|---|
 | Success metric (the number that must move) | |
 | Target value | |
-| Measurement method (which eval, which dashboard — see the [eval harness](./eval-harness.md)) | |
+| Measurement method (which eval, which dashboard — see the [eval harness](./eval-driven-development.md)) | |
 | Who signs off that it's met | |
 | What's explicitly out of scope | |
 | Known risks / governance flags carried forward | |
@@ -123,4 +123,4 @@ Fill this out at the end of scoping, before any code is written. This is what "i
 
 ---
 
-*Back to [The FDE Playbook](./README.md) · [The Governance Playbook](./governance-playbook.md) · [Eval Harness Guide](./eval-harness.md)*
+*Back to [The FDE Playbook](./README.md) · [The Governance Playbook](./governance-playbook.md) · [Eval Harness Guide](./eval-driven-development.md)*

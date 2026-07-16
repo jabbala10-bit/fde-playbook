@@ -35,9 +35,9 @@
 |---|---|---|
 | **Instrumented service layer** | The single gateway every model call flows through — the substrate for logging, evals, guardrails, cost control, and compliance | [reference-architecture.md](./reference-architecture.md) |
 | **Guardrails** | Input/output checks — PII redaction, prompt-injection defense, policy/format validation — sitting inside the service layer | [reference-architecture.md](./reference-architecture.md) |
-| **Golden set** | The curated, held-out, continuously-grown set of real examples an eval is scored against | [eval-harness.md](./eval-harness.md) |
-| **LLM-as-judge** | Using a model to score another model's output against a rubric — fast and scalable, but needs calibration against human labels and position-bias controls | [eval-harness.md](./eval-harness.md) |
-| **Groundedness** | In RAG evaluation: whether an answer is actually supported by the retrieved context, independent of whether the answer is correct | [eval-harness.md](./eval-harness.md) |
+| **Golden set** | The curated, held-out, continuously-grown set of real examples an eval is scored against | [eval-driven-development.md](./eval-driven-development.md) |
+| **LLM-as-judge** | Using a model to score another model's output against a rubric — fast and scalable, but needs calibration against human labels and position-bias controls | [eval-driven-development.md](./eval-driven-development.md) |
+| **Groundedness** | In RAG evaluation: whether an answer is actually supported by the retrieved context, independent of whether the answer is correct | [eval-driven-development.md](./eval-driven-development.md) |
 | **PACELC** | Extension of CAP theorem: during a **P**artition choose **A**vailability or **C**onsistency; **E**lse (normal ops) choose **L**atency or **C**onsistency | [decision-driven-engineer.md](./decision-driven-engineer.md) |
 | **Little's Law** | `concurrency = arrival_rate × latency` — sizes thread pools, connection pools, and queues | [decision-driven-engineer.md](./decision-driven-engineer.md) |
 | **Mechanical sympathy** | Designing with the hardware's real behavior in mind (cache lines, branch prediction, memory hierarchy) rather than against it | [decision-driven-engineer.md](./decision-driven-engineer.md) |

@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '{print $NF}')",
+      "Bash(python -m pyflakes --version)",
+      "Bash(pip show *)",
+      "Bash(python -m pip install pyflakes -q)",
+      "Bash(python -m ensurepip --default-pip)",
+      "Bash(python -c \"import sys; print\\(sys.executable\\)\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(python -m pyflakes *.py)",
+      "Bash(python \"C:\\\\Users\\\\mesek\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\e--Business-Freelance---AI-Systems-Arch---AI-Governance--Compliance-Notes---Case-Studies--FDE-Projects-fde-playbook\\\\a5afc7f8-8e68-42c5-8976-9933659bf179\\\\scratchpad\\\\check_attrs.py\")",
+      "Bash(python -c ' *)",
+      "Bash(grep -v \"^\\\\./\\\\.git\")",
+      "Bash(python -m capstones.enterprise_rag eval)",
+      "Bash(python -m capstones.enterprise_rag ask \"How many customers were affected by the Beta Industries breach?\" --matter matter-202)",
+      "Bash(python -m pytest tests/capstones/test_governance_assessment.py -v)",
+      "Bash(python -m pytest tests/capstones/test_incident_debugging.py -v)",
+      "Bash(python -m capstones.incident_debugging run --seed 7 --reveal)",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python -m pip install -e \".[dev]\" --quiet --no-warn-script-location)",
+      "Bash(python -m pip show fde-playbook)",
+      "Bash(python -m pytest -q)",
+      "Bash(python -m pip uninstall -y fde-playbook --quiet)",
+      "Bash(python3 -)",
+      "Bash(python -)",
+      "Bash(python -m capstones.full_stack_observability simulate)",
+      "Bash(python -m capstones.full_stack_observability topology)",
+      "Bash(python -m capstones.full_stack_observability diagnose)",
+      "Bash(python -m capstones.full_stack_observability export --vendor local --path /tmp/fso_test_export.json)",
+      "Bash(python -m capstones.full_stack_observability export --vendor datadog --api-key TESTKEY)",
+      "Bash(python -m pytest tests/capstones/test_full_stack_observability.py -v)"
+    ],
+    "additionalDirectories": [
+      "E:\\Business\\Freelance - AI Systems Arch & AI Governance, Compliance\\Notes & Case Studies -FDE\\Projects\\fde-playbook\\capstones\\*"
+    ]
+  }
+}

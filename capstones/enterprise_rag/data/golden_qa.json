@@ -1,0 +1,47 @@
+[
+  {
+    "question": "What is the transaction value in the Acme Robotics merger?",
+    "matter_id": "matter-101",
+    "expected_doc_id": "acme-merger-agreement"
+  },
+  {
+    "question": "How long is the exclusivity period in the merger agreement?",
+    "matter_id": "matter-101",
+    "expected_doc_id": "acme-merger-agreement"
+  },
+  {
+    "question": "What happens to employee equity grants under the merger terms?",
+    "matter_id": "matter-101",
+    "expected_doc_id": "acme-merger-agreement"
+  },
+  {
+    "question": "How many pending litigation matters are listed against Acme Robotics?",
+    "matter_id": "matter-101",
+    "expected_doc_id": "acme-disclosure-schedule"
+  },
+  {
+    "question": "Does the disclosure schedule show any outstanding tax liens?",
+    "matter_id": "matter-101",
+    "expected_doc_id": "acme-disclosure-schedule"
+  },
+  {
+    "question": "When did Beta Industries detect the unauthorized database access?",
+    "matter_id": "matter-202",
+    "expected_doc_id": "beta-breach-notice"
+  },
+  {
+    "question": "How many customers were affected by the Beta Industries breach?",
+    "matter_id": "matter-202",
+    "expected_doc_id": "beta-breach-notice"
+  },
+  {
+    "question": "How quickly did the incident response team contain the Beta Industries breach?",
+    "matter_id": "matter-202",
+    "expected_doc_id": "beta-incident-timeline"
+  },
+  {
+    "question": "What caused the intrusion according to forensic analysis?",
+    "matter_id": "matter-202",
+    "expected_doc_id": "beta-incident-timeline"
+  }
+]

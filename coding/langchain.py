@@ -151,9 +151,13 @@ def evaluation_example():
 		# Very small evaluation harness: compare expected output to model output
 		expected = "Backpressure is controlling the flow when downstream is slow."
 		out = "Backpressure is a mechanism to slow producers when consumers are overwhelmed."
-		# Simple semantic similarity or BLEU could be used; here we do substring checks
-		score = 1.0 if "slow" in out or "overwhelm" in out else 0.0
-		print("Evaluation score:", score)
+		# Keyword-overlap score: fraction of expected's significant words present in out
+		stopwords = {"is", "a", "the", "when", "of", "to"}
+		expected_words = {w.strip(".,") for w in expected.lower().split()} - stopwords
+		out_words = {w.strip(".,") for w in out.lower().split()}
+		overlap = expected_words & out_words
+		score = len(overlap) / len(expected_words)
+		print(f"Evaluation score: {score:.2f} (matched: {sorted(overlap)})")
 	except Exception as e:
 		print("evaluation_example skipped or error:", e)
 

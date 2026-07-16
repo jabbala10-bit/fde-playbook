@@ -27,6 +27,8 @@ def sha1(text: str) -> str:
 	return hashlib.sha1(text.encode('utf-8')).hexdigest()
 
 def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50) -> List[str]:
+	if overlap >= chunk_size:
+		raise ValueError(f"overlap ({overlap}) must be smaller than chunk_size ({chunk_size})")
 	words = text.split()
 	chunks = []
 	i = 0

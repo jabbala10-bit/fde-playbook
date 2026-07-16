@@ -557,49 +557,49 @@ class EUAIActAssessor:
         if profile.is_gpai_model_provider:
             hits.append(
                 DetectionHit(
-                    "G0",
-                    RiskCategory.GPAI,
-                    "explicit GPAI model provider flag",
-                    ("is_gpai_model_provider",),
-                    "The profile explicitly indicates GPAI model-provider status.",
-                    0.95,
-                    80,
+                    rule_id="G0",
+                    category=RiskCategory.GPAI,
+                    label="explicit GPAI model provider flag",
+                    matched_terms=("is_gpai_model_provider",),
+                    confidence=0.95,
+                    rationale="The profile explicitly indicates GPAI model-provider status.",
+                    severity=80,
                 )
             )
         if profile.is_generative_ai:
             hits.append(
                 DetectionHit(
-                    "T0",
-                    RiskCategory.TRANSPARENCY,
-                    "explicit generative AI flag",
-                    ("is_generative_ai",),
-                    "The profile explicitly indicates generative AI functionality.",
-                    0.8,
-                    65,
+                    rule_id="T0",
+                    category=RiskCategory.TRANSPARENCY,
+                    label="explicit generative AI flag",
+                    matched_terms=("is_generative_ai",),
+                    confidence=0.8,
+                    rationale="The profile explicitly indicates generative AI functionality.",
+                    severity=65,
                 )
             )
         if profile.is_biometric_system:
             hits.append(
                 DetectionHit(
-                    "H0",
-                    RiskCategory.HIGH_RISK,
-                    "explicit biometric system flag",
-                    ("is_biometric_system",),
-                    "The profile explicitly indicates biometric AI functionality.",
-                    0.85,
-                    85,
+                    rule_id="H0",
+                    category=RiskCategory.HIGH_RISK,
+                    label="explicit biometric system flag",
+                    matched_terms=("is_biometric_system",),
+                    confidence=0.85,
+                    rationale="The profile explicitly indicates biometric AI functionality.",
+                    severity=85,
                 )
             )
         if profile.is_safety_component or profile.integrated_into_regulated_product:
             hits.append(
                 DetectionHit(
-                    "H10",
-                    RiskCategory.HIGH_RISK,
-                    "explicit safety/product integration flag",
-                    ("safety_component_or_regulated_product",),
-                    "AI safety components or regulated-product integration can trigger high-risk obligations.",
-                    0.85,
-                    90,
+                    rule_id="H10",
+                    category=RiskCategory.HIGH_RISK,
+                    label="explicit safety/product integration flag",
+                    matched_terms=("safety_component_or_regulated_product",),
+                    confidence=0.85,
+                    rationale="AI safety components or regulated-product integration can trigger high-risk obligations.",
+                    severity=90,
                 )
             )
 

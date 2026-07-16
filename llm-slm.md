@@ -295,6 +295,11 @@ Pattern across all: **DAPT on curated domain tokens + domain-specific instructio
 - **vLLM** with **PagedAttention** [Kwon et al., 2023] — continuous batching, prefix caching; **SGLang** (RadixAttention) for agentic/structured workloads; **TensorRT-LLM** for max NVIDIA throughput; llama.cpp/Ollama for edge & air-gapped on-prem (common BFSI requirement).
 - **Speculative decoding** [Leviathan et al., 2022; Chen et al., 2023b]: 2–3× latency win with a small drafter — your domain SLM can draft for your domain LLM. Medusa [Cai et al., 2024], EAGLE for head-based variants.
 - KV-cache economics dominate long-context serving: GQA/MLA at architecture time (§5) is what makes 128k-context contract analysis affordable.
+- Everything above is training/architecture-side. For the deployment-side
+  question — which GPU to provision, self-host-vs-API cost math, batching/
+  KV-cache/quantization tuning at serve time, and GPU-level troubleshooting
+  and observability — see
+  [notes/21_hardware_gpu_inference_and_observability.md](./notes/21_hardware_gpu_inference_and_observability.md).
 
 ---
 

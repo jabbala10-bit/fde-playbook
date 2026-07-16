@@ -634,7 +634,7 @@ class SimpleToolAgent:
 
     def run(self, task: str) -> Dict[str, Any]:
         steps = [AgentStep(AgentState.PLAN, f"Understand task: {task}")]
-        if "calculate" in task.lower() or re.search(r"\d+\s*[+\-*/]\s*\d+", task):
+        if ("calculate" in task.lower() or re.search(r"\d+\s*[+\-*/]\s*\d+", task)) and "calculator" in self.tools:
             expression = re.findall(r"[0-9+\-*/().\s]+", task)[0].strip()
             result = self.tools["calculator"].run(expression=expression)
             steps.append(AgentStep(AgentState.ACT, "Use calculator for arithmetic.", "calculator", result.output))

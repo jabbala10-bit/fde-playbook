@@ -2,7 +2,7 @@
 
 ### A build spec for the one architectural decision the rest of the stack keeps pointing to
 
-*Part of [The FDE Playbook](./README.md). Feeds [The Governance Playbook](./governance-playbook.md)'s governance hooks, the [EU AI Act guide](./eu-ai-act.md)'s Article 12/14/15/50 obligations, and the [eval harness](./eval-harness.md).*
+*Part of [The FDE Playbook](./README.md). Feeds [The Governance Playbook](./governance-playbook.md)'s governance hooks, the [EU AI Act guide](./eu-ai-act.md)'s Article 12/14/15/50 obligations, and the [eval harness](./eval-driven-development.md).*
 
 > Three other docs in this stack call this "the single highest-leverage architectural choice you make" and stop there. This is where it actually gets built. The idea in one sentence: **every model call in your product flows through one path**, and that path is where you get observability, cost control, evals, guardrails, and compliance — as a side effect of good engineering, not as separate projects bolted on later.
 
@@ -69,7 +69,7 @@ Everything below the gateway is invisible to the caller — a feature team calls
 | **Output guardrails** | Schema/format validation, policy checks, confidence thresholds before the caller sees anything | Robustness, safety (Art 15) |
 | **Immutable audit log** | Every input, output, model+prompt version, timestamp, score, override — written async, never mutated | Traceability (Art 12), incident forensics, the [discovery toolkit](./discovery-toolkit.md)'s "what happened" answer |
 | **Human-in-the-loop hooks** | Surface confidence/explanation, override control, anti-automation-bias nudges | Human oversight (Art 14) |
-| **Eval sampling hook** | A percentage (or all) of traffic gets scored against the [eval harness](./eval-harness.md), off the critical path | Continuous quality signal without adding latency |
+| **Eval sampling hook** | A percentage (or all) of traffic gets scored against the [eval harness](./eval-driven-development.md), off the critical path | Continuous quality signal without adding latency |
 | **Cost + latency instrumentation** | Per-request token count, cost, latency, tagged by feature/tenant | Unit economics, the thing that makes or breaks a use case |
 | **Data-governance plane** | Residency routing, retention policy, consent state | GDPR/DPDP-class regimes |
 
@@ -124,7 +124,7 @@ A feature team never sees a raw provider SDK. That constraint is what keeps the 
 1. **Gateway with a single logical-name → model mapping.** Even one model behind one name is worth doing on day one.
 2. **Immutable async logging**, before you need it for compliance — retrofitting logs onto six months of undocumented traffic is the expensive version of this.
 3. **Input/output guardrails**, starting with the guardrails your riskiest use case needs, not a generic library.
-4. **Eval sampling hook** — even a stub that logs to a queue is enough to start; the [eval harness](./eval-harness.md) consumes this.
+4. **Eval sampling hook** — even a stub that logs to a queue is enough to start; the [eval harness](./eval-driven-development.md) consumes this.
 5. **Model registry + versioning** once you have more than one prompt version in flight — usually within the first month.
 6. **Cost/latency dashboards** as soon as a second feature team starts calling the layer, because that's when "whose cost is this" becomes a real question.
 
@@ -156,4 +156,4 @@ A feature team never sees a raw provider SDK. That constraint is what keeps the 
 
 ---
 
-*Back to [The FDE Playbook](./README.md) · [The Governance Playbook](./governance-playbook.md) · [Eval Harness Guide](./eval-harness.md)*
+*Back to [The FDE Playbook](./README.md) · [The Governance Playbook](./governance-playbook.md) · [Eval Harness Guide](./eval-driven-development.md)*

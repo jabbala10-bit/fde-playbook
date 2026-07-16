@@ -1,0 +1,22 @@
+[
+  {
+    "doc_id": "acme-merger-agreement",
+    "matter_id": "matter-101",
+    "text": "This Merger Agreement is entered into between Acme Robotics Inc and Nova Industrial Holdings. The transaction values Acme Robotics at four hundred twenty million dollars. Closing is conditioned on regulatory approval from the antitrust division. The exclusivity period runs for forty five days from signing. All employee equity grants accelerate upon a change of control under the merger terms. Either party may terminate the agreement if closing has not occurred within one hundred eighty days."
+  },
+  {
+    "doc_id": "acme-disclosure-schedule",
+    "matter_id": "matter-101",
+    "text": "The disclosure schedule lists three pending litigation matters against Acme Robotics none of which are material. Acme Robotics discloses two patent applications still pending before the patent office. No environmental liabilities were identified during diligence. The disclosure schedule confirms no outstanding tax liens against Acme Robotics. All material contracts were provided to counsel for review before signing."
+  },
+  {
+    "doc_id": "beta-breach-notice",
+    "matter_id": "matter-202",
+    "text": "Beta Industries detected unauthorized access to its customer database on March third. The breach exposed names emails and hashed passwords for approximately eighty thousand customers. Beta Industries notified affected customers within seventy two hours as required by state breach notification law. No payment card data was exposed in the Beta Industries breach. Beta Industries offered two years of free credit monitoring to affected customers."
+  },
+  {
+    "doc_id": "beta-incident-timeline",
+    "matter_id": "matter-202",
+    "text": "The Beta Industries incident response team contained the breach within six hours of detection. Forensic analysis attributed the intrusion to a compromised third party vendor credential. Beta Industries engaged outside counsel and a forensic firm the same day. The final incident report was delivered to the Beta Industries board within two weeks. Beta Industries has since rotated all vendor credentials and enabled multi factor authentication."
+  }
+]
